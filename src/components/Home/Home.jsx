@@ -22,10 +22,10 @@ const Home = ({ emailUsuario }) => {
   };
 
   return (
-    <div className='container-flex'>
+    <div className='container'>
       <div className="row">
         <div className="col-md-2">
-          <NavbarLateral handleOptionMenu={handleOptionMenu} />
+          <NavbarLateral handleOptionMenu={handleOptionMenu} emailUsuario={emailUsuario} />
         </div>
         <div className="col-md-10 content-right">
           {renderContent()}
