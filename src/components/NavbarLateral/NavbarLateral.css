@@ -1,0 +1,9 @@
+.menuLateral{
+    background-color: #263238;
+    color: white;
+    height: 100vh;
+}
+.title-bienvenido{
+    font-size: 14px;
+    font-weight: 400;
+}

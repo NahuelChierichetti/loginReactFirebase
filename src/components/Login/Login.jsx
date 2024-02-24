@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import loginRecruiter from '../../assets/img/recruiter-login.svg'
 import imageProfile from '../../assets/img/perfil.jpg'
 import './Login.css'
+import Swal from 'sweetalert2'
 
 import appFirebase from '../../credenciales'
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
@@ -20,13 +21,21 @@ const Login = () => {
       try{
         await createUserWithEmailAndPassword(auth, email, password)
       } catch (error) {
-        alert("Asegurese que la contraseña tenga más de 8 caracteres")
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Asegurese que la contraseña tenga más de 8 caracteres',
+        });
       }
     } else {
       try{
         await signInWithEmailAndPassword(auth, email, password)
       } catch (error) {
-        alert("El email o la contraseña son incorrectos")
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'El email o la contraseña son incorrectos',
+        });
       }
     }
   }

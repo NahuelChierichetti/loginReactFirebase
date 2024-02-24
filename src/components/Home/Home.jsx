@@ -1,16 +1,38 @@
-import React from 'react'
-import './Home.css'
-import appFirebase from '../../credenciales'
-import { getAuth, signOut } from 'firebase/auth'
-const auth = getAuth(appFirebase)
+import React, { useState } from 'react';
+import Usuarios from '../Usuarios/Usuarios';
+import OfertasActivas from '../OfertasActivas/OfertasActivas';
+import NavbarLateral from '../NavbarLateral/NavbarLateral';
 
-const Home = ({emailUsuario}) => {
+const Home = ({ emailUsuario }) => {
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleOptionMenu = (option) => {
+    setSelectedOption(option);
+  };
+
+  const renderContent = () => {
+    switch (selectedOption) {
+      case 'usuarios':
+        return <Usuarios />;
+      case 'ofertas-activas':
+        return <OfertasActivas />;
+      default:
+        return <h2 className='text-center'>Hola</h2>;
+    }
+  };
+
   return (
-    <div>
-      <h2 className='text-center'>Bienvenido usuario {emailUsuario}</h2>
-      <button onClick={()=>signOut(auth)} className='btn btn-primary'>Cerrar Sesión</button>
+    <div className='container-flex'>
+      <div className="row">
+        <div className="col-md-2">
+          <NavbarLateral handleOptionMenu={handleOptionMenu} />
+        </div>
+        <div className="col-md-10 content-right">
+          {renderContent()}
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

@@ -64,6 +64,12 @@
     font-size: 16px;
     font-weight: 400;
 }
+button.swal2-confirm.swal2-styled{
+    background-color: #92E3A9 !important;
+    color: #263238 !important;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+}
 
 @media screen and (max-width: 768px){
     .tamaño-imagen {
