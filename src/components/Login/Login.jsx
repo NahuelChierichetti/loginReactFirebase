@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import loginRecruiter from '../assets/img/recruiter-login.svg'
-import imageProfile from '../assets/img/perfil.jpg'
+import loginRecruiter from '../../assets/img/recruiter-login.svg'
+import imageProfile from '../../assets/img/perfil.jpg'
+import './Login.css'
 
-import appFirebase from '../credenciales'
+import appFirebase from '../../credenciales'
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 const auth = getAuth(appFirebase)
 
@@ -33,7 +34,7 @@ const Login = () => {
   return (
     <div className='container'>
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-4 col-12 mt-5 mt-md-0">
           <div className="padre">
             <div className="card card-body shadow">
               <img src={imageProfile} className='estilo-profile' alt="" />

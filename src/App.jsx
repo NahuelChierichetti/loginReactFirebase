@@ -2,10 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import appFirebase from '../src/credenciales'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 const auth = getAuth(appFirebase)
 
-import Login from '../src/components/Login'
-import Home from '../src/components/Home'
+import Login from './components/Login/Login'
+import Home from './components/Home/Home'
 
 function App() {
 
@@ -20,9 +21,13 @@ function App() {
   })
 
   return (
-    <div>
-      {usuario ? <Home emailUsuario={usuario.email}/> : <Login/>}
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={usuario ? <Home emailUsuario={usuario.email}/> : <Login/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
