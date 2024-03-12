@@ -1,19 +1,25 @@
-.menuLateral{
+.menuLateral {
     color: #263238;
-    width: 230px;
-    background: #fff;
+    width: 100%;
+    background: #EF8E41;
     z-index: 2;
     position: fixed;
     left: 0px;
-    border-left: 1px solid #f3f3f3;
-    height: calc(100% - 100px);
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 0;
-    box-shadow: 0 3px 30px rgba(0,0,0,.1), 0 3px 20px rgba(0,0,0,.1);
-    height: 100vh;
+    bottom: 0px;
 }
-.title-bienvenido{
-    font-size: 14px;
-    font-weight: 400;
+.col-3.containerMenu {
+    text-align: center;
 }
+button.btnMenu {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+}
+
+  
+  .containerMenu {
+    margin-bottom: 10px; /* Espacio entre los botones */
+  }

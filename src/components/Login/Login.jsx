@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import loginRecruiter from '../../assets/img/recruiter-login.svg'
-import imageProfile from '../../assets/img/perfil.jpg'
+import imageProfile from '../../assets/img/logo-rescatame.png'
 import './Login.css'
 import Swal from 'sweetalert2'
 
@@ -41,9 +41,9 @@ const Login = () => {
   }
 
   return (
-    <div className='container'>
-      <div className="row">
-        <div className="col-md-4 col-12 mt-5 mt-md-0">
+    <div className='container-flex'>
+      <div className="row contenedor-login">
+        <div className="col-12 align-center">
           <div className="padre">
             <div className="card card-body shadow">
               <img src={imageProfile} className='estilo-profile' alt="" />
@@ -56,9 +56,9 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-8">
+        {/* <div className="col-md-8">
           <img src={loginRecruiter} alt="Login Recruiter" className='tamaño-imagen' />
-        </div>
+        </div> */}
       </div>
     </div>
   )

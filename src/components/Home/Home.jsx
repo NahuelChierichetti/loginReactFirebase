@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Usuarios from '../Usuarios/Usuarios';
+import ContainerListPets from '../ContainerListPets/ContainerListPets';
 import OfertasActivas from '../OfertasActivas/OfertasActivas';
 import NavbarLateral from '../NavbarLateral/NavbarLateral';
 
@@ -12,23 +12,23 @@ const Home = ({ emailUsuario }) => {
 
   const renderContent = () => {
     switch (selectedOption) {
-      case 'usuarios':
-        return <Usuarios />;
+      case 'inicio':
+        return <ContainerListPets />;
       case 'ofertas-activas':
         return <OfertasActivas />;
       default:
-        return <h2 className='text-center'>Hola</h2>;
+        return <ContainerListPets />;
     }
   };
 
   return (
     <div className='container'>
       <div className="row">
-        <div className="col-md-2">
-          <NavbarLateral handleOptionMenu={handleOptionMenu} emailUsuario={emailUsuario} />
-        </div>
-        <div className="col-md-10 content-right">
+        <div className="col-12 content-right">
           {renderContent()}
+        </div>
+        <div className="col-12">
+          <NavbarLateral handleOptionMenu={handleOptionMenu} emailUsuario={emailUsuario} />
         </div>
       </div>
     </div>

@@ -1,7 +1,9 @@
 .padre{
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 100vh;
+    background: #BDD1ED;
+    padding: 0px 20px;
 }
 .tamaño-imagen{
     width: 100%;
@@ -26,24 +28,24 @@
     margin-bottom: 20px;
 }
 .cajatexto:focus{
-    outline: 1px solid #92E3A9;
-    box-shadow: 0 0 4px #92E3A9;
+    outline: 1px solid #F3CF54;
+    box-shadow: 0 0 4px #F3CF54;
 }
 .btnform{
-    background-color: #92E3A9;
-    border: 1px solid #92E3A9;
+    background-color: #F3CF54;
+    border: 1px solid #F3CF54;
     border-radius: 10px;
     width: 100%;
     padding: 15px;
     color: #263238;
     font-weight: 600;
     margin-bottom: 20px;
-    box-shadow: 0 0 4px #92E3A9;
+    box-shadow: 0 0 4px #F3CF54;
     transition: .3s;
 }
 .btnform:hover{
     background-color: #263238;
-    color: #92E3A9;
+    color: #F3CF54;
     box-shadow: 0px 0px 4px #263238;
     border-color: #263238;
     transition: .3s;
@@ -65,7 +67,7 @@
     font-weight: 400;
 }
 button.swal2-confirm.swal2-styled{
-    background-color: #92E3A9 !important;
+    background-color: #F3CF54 !important;
     color: #263238 !important;
     padding-left: 80px !important;
     padding-right: 80px !important;
