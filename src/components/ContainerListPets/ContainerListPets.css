@@ -31,7 +31,6 @@ form input {
 }
   
 .modal-content {
-    background-color: #FFFFE1;
     margin: 5% auto !important;
     padding: 20px;
     box-shadow: 0 0 10px #e1d19ba9;
@@ -64,7 +63,6 @@ button.btn.btn-primary.btnGuardar {
 }
 
 .cardMascota{
-    background-color: #FFFFE1;
     border: none;
     box-shadow: 0 0 10px #e1d19ba9;
     margin-top: 20px;

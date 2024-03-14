@@ -12,6 +12,7 @@ import Home from './components/Home/Home'
 import Usuarios from './components/Usuarios/Usuarios';
 import OfertasActivas from './components/OfertasActivas/OfertasActivas';
 import UsuarioDetail from './components/UsuarioDetail/UsuarioDetail'
+import PetDetail from './components/PetDetail/PetDetail'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <Route path='/' element={usuario ? <Home emailUsuario={usuario.email}/> : <Login/>}/>
           <Route path='/usuarios' element={<Usuarios />} />
           <Route path='/usuario/:id' element={<UsuarioDetail />} />
+          <Route path='/mascota/:id' element={<PetDetail />} />
           <Route path='/ofertas-activas' element={<OfertasActivas />} />
         </Routes>
       </BrowserRouter>

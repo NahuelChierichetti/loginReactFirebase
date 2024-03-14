@@ -115,7 +115,7 @@ const ContainerListPets = () => {
                             <img src={mascota.imagen} alt={mascota.nombre} className='imgCardMascota'/>
                             <h3>{mascota.nombre}</h3>
                             <p><PiMapPinLine /> {mascota.ubicacion}</p>
-                            <Link to={mascota.telefono} className='btn btnContactar'>Ver más</Link>
+                            <Link to={`/mascota/${mascota.id}`} className='btn btnContactar'>Ver más</Link>
                         </div>
                     ))}
                 </div>
