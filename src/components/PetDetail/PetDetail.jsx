@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../credenciales'
+import { PiMapPinLine } from 'react-icons/pi';
+import { PiCalendarLight } from "react-icons/pi";
+import { PiDogLight } from "react-icons/pi";
+import './PetDetail.css'
+import NavbarLateral from '../NavbarLateral/NavbarLateral';
 
 const PetDetail = () => {
     const [item, setItem] = useState(null)
@@ -23,8 +28,22 @@ const PetDetail = () => {
         <div>
             {item ? (
                 <>
-                    <h2>{item.nombre}</h2>
-                    <h2>{item.edad}</h2>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="card card-body cardMascota mascotaDetail">
+                                    <img src={item.imagen} alt={item.nombre} className="imgCardMascota" />
+                                    <h3><PiDogLight /> {item.nombre}</h3>
+                                    <p>
+                                        <PiMapPinLine /> {item.ubicacion}
+                                    </p>
+                                    <p><PiCalendarLight /> {item.edad}</p>
+                                    <p>{item.caracter}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <NavbarLateral />
                 </>
             ) : (
                 <p>Cargando...</p>

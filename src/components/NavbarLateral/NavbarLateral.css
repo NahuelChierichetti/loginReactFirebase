@@ -12,7 +12,7 @@
 .col-3.containerMenu {
     text-align: center;
 }
-button.btnMenu {
+.btnMenu {
     background: transparent;
     border: none;
     color: #fff;

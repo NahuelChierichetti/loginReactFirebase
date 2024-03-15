@@ -1,4 +1,4 @@
-button.btnActions {
+.btnActions {
     background: #BDD1ED;
     border: 1px solid #BDD1ED;
     padding: 15px;
@@ -8,6 +8,7 @@ button.btnActions {
     width: 100%;
     font-weight: 600;
     text-transform: uppercase;
+    text-decoration: none;
 }
 .modal {
     display: block;
@@ -68,11 +69,16 @@ button.btn.btn-primary.btnGuardar {
     margin-top: 20px;
 }
 
+.cardMascota:last-child{
+    margin-bottom: 60px;
+}
+
 img.imgCardMascota {
-    height: 180px;
+    height: 220px;
     width: 100%;
     object-fit: cover;
     margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .btnContactar{

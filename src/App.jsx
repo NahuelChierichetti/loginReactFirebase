@@ -13,6 +13,9 @@ import Usuarios from './components/Usuarios/Usuarios';
 import OfertasActivas from './components/OfertasActivas/OfertasActivas';
 import UsuarioDetail from './components/UsuarioDetail/UsuarioDetail'
 import PetDetail from './components/PetDetail/PetDetail'
+import CargarMascota from './components/CargarMascota/CargarMascota'
+import Perfil from './components/Perfil/Perfil'
+import EditarPerfil from './components/EditarPerfil/EditarPerfil'
 
 function App() {
 
@@ -32,9 +35,12 @@ function App() {
         <Routes>
           <Route path='/' element={usuario ? <Home emailUsuario={usuario.email}/> : <Login/>}/>
           <Route path='/usuarios' element={<Usuarios />} />
+          <Route path='/cargar-mascota' element={<CargarMascota />} />
           <Route path='/usuario/:id' element={<UsuarioDetail />} />
           <Route path='/mascota/:id' element={<PetDetail />} />
           <Route path='/ofertas-activas' element={<OfertasActivas />} />
+          <Route path='/perfil' element={<Perfil />} />
+          <Route path='/editar-perfil' element={<EditarPerfil />} />
         </Routes>
       </BrowserRouter>
     </>

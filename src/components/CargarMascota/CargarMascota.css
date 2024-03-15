@@ -1,0 +1,33 @@
+.container.contenedor-form {
+    padding: 30px 20px;
+}
+h2.title-cargar {
+    margin-bottom: 20px;
+    color: #263238;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.btn-guardar{
+    background-color: #F3CF54;
+    border: 1px solid #F3CF54;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    color: #263238;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px #F3CF54;
+    transition: .3s;
+    margin-top: 20px;
+}
+.btn-guardar:hover{
+    background-color: #263238;
+    color: #F3CF54;
+    box-shadow: 0px 0px 4px #263238;
+    border-color: #263238;
+    transition: .3s;
+}
+a.btn-volver {
+    text-align: center;
+    text-decoration: none;
+}
